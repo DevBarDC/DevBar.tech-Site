@@ -1,5 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Add to your global CSS, e.g., App.css */
+html, body, #root {
+    background: #181b20; /* Match VS Code editor background */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #b5e853; /* Editor-like text color */
+}
+
+body, #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    
+    color: #b5e853;
+    text-decoration: underline;
+    text-align: center;
 }

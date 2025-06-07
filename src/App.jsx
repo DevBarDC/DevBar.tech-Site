@@ -1,19 +1,16 @@
 import React from 'react'
-import {  } from "react-icons/fa";
-import { Header, Footer } from './components/index.js';
+import { Header, Head, AboutUs, Footer} from './components/index'
 import './global.css'
 
 function App() {
   return (
     <>
-      <div>
-        <main className="main-content">
-          <Header />
-          <Footer />
-        </main>
-      </div>
+      <Header />
+      <Head />
+      <AboutUs />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default App
