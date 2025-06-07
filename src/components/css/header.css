@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .navbar {
-    background: #23272a;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 32px;
-    height: 64px;
+    height: 80px;
     position: relative;
     z-index: 10;
+    background: transparent;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    flex: 1 1 0;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 0;
+    gap: 16px;
+    position: relative;
 }
 
 .navbar-brand {
@@ -20,7 +35,7 @@
 
 .logo {
     font-family: 'Meow Script', cursive;
-    font-size: 1.7em;
+    font-size: 2.5em;
     font-weight: bold;
     letter-spacing: 1px;
     color: #7289da;
@@ -121,4 +136,92 @@
         width: 100%;
         padding: 16px 24px;
     }
+}
+
+/* Add to your header.css */
+
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(24, 27, 32, 0.98);
+    z-index: 1 !important; /* Maximum z-index to ensure it's above everything */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.mobile-nav-links li {
+    margin: 24px 0;
+}
+
+.mobile-nav-links a {
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 
+        color 0.2s,
+        background 0.2s,
+        box-shadow 0.2s,
+        transform 0.1s;
+    padding: 12px 36px;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+    margin: 0 0 8px 0;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus {
+    color: #7289da;
+    background: #23272a;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 24px 0 rgba(114,137,218,0.10);
+    outline: none;
+}
+
+/* Special style for Join Us button */
+.mobile-nav-links a.join-btn {
+    background: linear-gradient(90deg, #7289da 0%, #99aab5 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 24px 0 rgba(114,137,218,0.18);
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 2.1em;
+    padding: 10px 30px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        box-shadow 0.2s,
+        transform 0.1s;
+}
+
+.mobile-nav-links a.join-btn:hover,
+.mobile-nav-links a.join-btn:focus {
+    background: linear-gradient(90deg, #99aab5 0%, #7289da 100%);
+    color: #fff;
+    box-shadow: 0 6px 32px 0 rgba(114,137,218,0.25);
+    transform: translateY(-3px) scale(1.06);
+    outline: none;
 }
