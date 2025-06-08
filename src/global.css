@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +8,7 @@
 
 /* Add to your global CSS, e.g., App.css */
 html, body, #root {
+    font-family: 'Roboto', sans-serif;
     background: #181b20; /* Match VS Code editor background */
     height: 100%;
     margin: 0;
