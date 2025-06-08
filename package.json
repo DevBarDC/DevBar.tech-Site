@@ -1,7 +1,7 @@
 {
   "name": "devbar-site",
   "homepage": "https://devbar.tech",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
