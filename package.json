@@ -1,8 +1,8 @@
 {
   "name": "devbar-site",
   "homepage": "https://devbar.tech",
-  "private": false,
-  "version": "0.0.0",
+  "private": true,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
