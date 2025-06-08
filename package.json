@@ -1,6 +1,6 @@
 {
   "name": "devbar-site",
-  "homepage": "https://devbardc.github.io/devbar.tech-site",
+  "homepage": "https://devbardc.github.io/DevBar.tech-Site/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
