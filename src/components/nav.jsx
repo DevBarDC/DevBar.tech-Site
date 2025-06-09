@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Outlet, Link } from "react-router-dom";
 
-function Header() {
+function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleToggle = () => setMenuOpen(!menuOpen);
@@ -39,6 +40,7 @@ function Header() {
                 .navbar-left {
                     display: flex;
                     align-items: center;
+                    height: 100%;
                     flex: 1 1 0;
                 }
                 .navbar-right {
@@ -59,7 +61,7 @@ function Header() {
                     font-size: 2.5em;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: #7289da;
+                    color: #b5e853;
                 }
                 .navbar-toggle {
                     display: none;
@@ -240,21 +242,40 @@ function Header() {
                             {menuOpen ? <FaTimes /> : <FaBars />}
                         </button>
                         <ul className={`nav-links${menuOpen ? ' active' : ''}`}>
-                            <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
-                            <li><a href="#about" onClick={handleLinkClick}>About</a></li>
-                            <li><a href="#about" onClick={handleLinkClick}>Join us</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/partners" onClick={handleLinkClick}>Partners</Link></li>
+                            <li>
+                                <a
+                                    href="https://discord.gg/V9mqtpHy8p"
+                                    onClick={handleLinkClick}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Join us
+                                </a>
+                            </li>
                         </ul>
                         {/* Fullscreen overlay for mobile menu */}
                         {menuOpen && (
                             <div className="mobile-menu-overlay">
                                 <ul className="mobile-nav-links">
                                     <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
-                                    <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+                                    <li>
+                                        <Link
+                                            to="/partners"
+                                            className=""
+                                            onClick={handleLinkClick}
+                                        >
+                                            Partners
+                                        </Link>
+                                    </li>
                                     <li>
                                         <a
-                                            href="#about"
+                                            href="https://discord.gg/V9mqtpHy8p"
                                             className="join-btn"
                                             onClick={handleLinkClick}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             Join us
                                         </a>
@@ -269,4 +290,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Nav;

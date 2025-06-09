@@ -27,7 +27,7 @@ function getRandomPosition() {
     };
 }
 
-function Head() {
+function Hero() {
     const heroRef = useRef(null);
     const [stars, setStars] = useState([]);
 
@@ -423,4 +423,4 @@ function Head() {
     );
 }
 
-export default Head;
+export default Hero;
