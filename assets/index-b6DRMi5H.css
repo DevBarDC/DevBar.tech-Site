@@ -1,0 +1,1 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";*{box-sizing:border-box;margin:0;padding:0}html,body,#root{font-family:Roboto,sans-serif;background:#181b20;height:100%;margin:0;padding:0;color:#b5e853}body,#root{min-height:100vh;display:flex;flex-direction:column}h1{color:#b5e853;text-decoration:underline;text-align:center}
