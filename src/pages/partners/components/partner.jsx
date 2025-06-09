@@ -44,7 +44,7 @@ function Partner({ logo, name, description, banner }) {
                     display: flex;
                     align-items: center;
                     gap: 18px;
-                    margin-top: -48px;
+                    margin-top: ${banner ? "-48px" : "32px"};
                     margin-bottom: 12px;
                     width: 100%;
                     padding-left: 32px;
@@ -95,7 +95,7 @@ function Partner({ logo, name, description, banner }) {
                         align-items: flex-start;
                         gap: 8px;
                         padding-left: 16px;
-                        margin-top: -48px;
+                        margin-top: ${banner ? "-48px" : "32px"};
                     }
                     .partner-description {
                         margin: 0 12px;
@@ -103,18 +103,20 @@ function Partner({ logo, name, description, banner }) {
                 }
             `}</style>
             <div className="partner-card">
-                <a
-                    className="partner-banner-link"
-                    href={banner}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src={banner}
-                        alt={name + " banner"}
-                        className="partner-banner-img"
-                    />
-                </a>
+                {banner && (
+                    <a
+                        className="partner-banner-link"
+                        href={banner}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src={banner}
+                            alt={name + " banner"}
+                            className="partner-banner-img"
+                        />
+                    </a>
+                )}
                 <div className="partner-header">
                     <a
                         className="partner-logo-link"
