@@ -17,8 +17,10 @@ function AboutUs() {
                     box-shadow: 0 2px 12px rgba(0,0,0,0.12);
                     overflow: hidden;
                     min-height: 320px;
+                    height: 420px;
                     position: relative;
                     z-index: 1;
+                    box-sizing: border-box;
                 }
                 .about-us-left {
                     flex: 0 0 260px;
@@ -34,12 +36,12 @@ function AboutUs() {
                     font-family: 'Meow Script', cursive;
                     font-size: 2.5em;
                     font-weight: bold;
-                    color: #7289da;
+                    color: #b5e853;
                     margin-bottom: 16px;
                     letter-spacing: 1px;
                 }
                 .about-us-left-desc {
-                    color: #b5e853;
+                    color: #fff;
                     font-size: 1.1em;
                     text-align: center;
                     margin-top: 8px;
@@ -57,17 +59,18 @@ function AboutUs() {
                 .about-us-right h1 {
                     font-size: 2.2em;
                     margin-bottom: 18px;
-                    color: #fff;
+                    color: #b5e853;
                 }
                 .about-us-right p {
                     font-size: 1.2em;
-                    color: #b5e853;
+                    color: #fff;
                     line-height: 1.6;
                 }
                 @media (max-width: 900px) {
                     .about-us-container {
                         flex-direction: column;
                         min-height: unset;
+                        height: auto !important; /* Force remove fixed height on mobile */
                     }
                     .about-us-left, .about-us-right {
                         border: none;

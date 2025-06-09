@@ -8,11 +8,12 @@ function Footer() {
                 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
                 .footer {
                     background-color: #181b20;
-                    color: #b5e853;
+                    color: #fff;
                     text-align: center;
                     height: 80px;
                     box-sizing: border-box;
                     width: 100%;
+                    /* No position: fixed or absolute */
                 }
                 .footer-content {
                     display: flex;
